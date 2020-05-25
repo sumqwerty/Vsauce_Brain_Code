@@ -356,7 +356,7 @@ void detectIT()
   }
   
   
-  
+  // 9, 6
   if(cnt == 1)
   {
     // 9
@@ -394,6 +394,7 @@ void detectIT()
     }
   }
   
+  // 2, 5
   if(cnt == 0)
   {
     if(lines == 5 && ignrLines == 5)
@@ -404,7 +405,7 @@ void detectIT()
         if(V4[i+21] == 1 && V4[i+27] == 1)
         {
           detected = 2;
-          //return;
+          return;
         }
         // 5
         else if(V4[i+18] == 1 && V4[i+24] == 1)
@@ -414,11 +415,13 @@ void detectIT()
         }
       }
     }
+    
+    // 4
     else if(lines == 3)
     {
       for(int i=0; i<3; ++i)
       {
-        // 4
+        
         if(V4[i+30] == 1 && V4[i+9] == 1)
         {
           detected = 4;
@@ -427,6 +430,7 @@ void detectIT()
       }
     }
     
+    // 3
     else if(ignrLines == 3 && lines == 4)
     {
       for(int i=0; i<3; ++i)
@@ -441,12 +445,15 @@ void detectIT()
 
   }
 
+  // 1
   if(lines == 1)
   {
     // 1
     detected = 1;
     return;
   }
+  
+  // 7
   if(lines == 2 && V4[53] == 1)
   {
     // 7
