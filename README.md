@@ -21,4 +21,4 @@ This is the layer which combines the angles from V2 to form rough shapes of the 
 ### In the code IT layer is not in the form of an array like the other layers, but its a function which outputs the final digit that the "Brain" has detected.
 This layer is not in the code,although it can be added. The IT layer is responsible for detecting the final digit from V4.
 
-
+![Demo](https://github.com/sumqwerty/Vsauce_Brain_Code/blob/master/demo.gif)
