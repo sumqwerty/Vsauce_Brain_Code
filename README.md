@@ -1,5 +1,5 @@
 # Vsauce_Brain_Code
-Program to show how human brain detects digits with layers of neurons.(Not machine learning)
+Program that detects digit like a human brain with layers of neurons.(Not machine learning)
 
 This is a project to show how human brain identifies digits, its NOT machine learning or genetic coding, its sort of a already trained human brain which detects single digits. In this project i am trying to convert the Stilwell Brain project Vsauce did in a mind field video.(https://www.youtube.com/watch?v=rA5qnZUXcqo)
 
