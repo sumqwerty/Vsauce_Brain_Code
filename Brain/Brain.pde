@@ -1,16 +1,28 @@
+PImage img;
+PWindow win;
 int[] retina;
 int[] V1;
 int[] V2;
 int[] V4;
+int[] IT;
 int detected = 100;
-void setup()
+
+void settings()
 {
   size(500,600);
+  
+}
+void setup()
+{
   retina = new int[25];
   V1 = new int[30];
   V2 = new int[46];
   V4 = new int[56];
+  IT = new int[10];
   fresh();
+  img = loadImage("bg25.png");
+  win = new PWindow();
+  
 }
 
 void fresh()
@@ -20,7 +32,8 @@ void fresh()
   for(int i=0; i<retina.length; ++i)retina[i] = 0;
   for(int i=0; i<V1.length; ++i)V1[i] = 0;
   for(int i=0; i<V2.length; ++i)V2[i] = 0;
-  for(int i=0; i<V4.length; ++i)V4[i] = 0;  
+  for(int i=0; i<V4.length; ++i)V4[i] = 0;
+  for(int i=0; i<IT.length; ++i)IT[i] = 0;
 }
 
 void dispArr(int[] arr)
@@ -269,8 +282,6 @@ void fillV4()
     else V4[j] = 0;
   }
   
-  
-  
 }
 
 void detectIT()
@@ -484,13 +495,21 @@ void draw()
 
 void updt()
 {
+  //fillV1();
   detectIT();
   fill(0);
-  rect(height-100,0,width,height);
+  rect(0,500,width,100);
+  for(int i=0; i<IT.length; ++i)IT[i] = 0;
+  //fill(0);
+  //rect(height-100,0,width,height);
   fill(255);
   textSize(40);
   if(detected == 100)text("Detected: Not a Number",0,height-50);
-  else text("Detected: "+str(detected),0,height-50);
+  else
+  {
+    IT[detected] = 1;
+    text("Detected: "+str(detected),0,height-50);
+  }
 }
 
 void keyPressed()
