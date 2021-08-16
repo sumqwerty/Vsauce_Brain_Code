@@ -22,3 +22,5 @@ This is the layer which combines the angles from V2 to form rough shapes of the 
 This layer is not in the code,although it can be added. The IT layer is responsible for detecting the final digit from V4.
 
 ![Demo](https://github.com/sumqwerty/Vsauce_Brain_Code/blob/master/demo.gif)
+
+![Demo](https://github.com/sumqwerty/Vsauce_Brain_Code/blob/master/nnv.gif)
